@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Cognito Integration Kit",
+	"Description": "Cognito Integration Kit offers seamless integration of AWS's Cognito's authentication services with complete C++ and Blueprint support, enabling secure user sign-up and sign-in processes.",
+	"Category": "Betide Studio Plugins",
+	"CreatedBy": "Betide Studio",
+	"CreatedByURL": "https://betide.studio",
+	"DocsURL": "https://aws.betide.studio/cognito/",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "CognitoIntegrationKit",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit"
+		}
+	]
+}
