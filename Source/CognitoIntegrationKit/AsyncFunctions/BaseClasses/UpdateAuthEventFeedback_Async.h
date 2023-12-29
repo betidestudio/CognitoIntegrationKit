@@ -22,19 +22,19 @@ struct FUpdateAuthEventFeedbackReq
 	GENERATED_BODY()
 
 	UPROPERTY(BlueprintReadWrite, Category = "Cognito Identity Kit")
-	FString EventId;
+	FString EventId = "";
 
 	UPROPERTY(BlueprintReadWrite, Category = "Cognito Identity Kit")
-	FString FeedbackToken;
+	FString FeedbackToken = "";
 
 	UPROPERTY(BlueprintReadWrite, Category = "Cognito Identity Kit")
-	TEnumAsByte<FFeedbackValueType> FeedbackValue;
+	TEnumAsByte<FFeedbackValueType> FeedbackValue = FFeedbackValueType::NOT_SET8;
 
 	UPROPERTY(BlueprintReadWrite, Category = "Cognito Identity Kit")
-	FString Username;
+	FString Username = "";
 
 	UPROPERTY(BlueprintReadWrite, Category = "Cognito Identity Kit")
-	FString UserPoolId;
+	FString UserPoolId = "";
 	
 };
 

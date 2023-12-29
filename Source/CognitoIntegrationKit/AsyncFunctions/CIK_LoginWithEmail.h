@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
+#include "Runtime/CoreUObject/Public/UObject/UObjectIterator.h"
 #include "CognitoIntegrationKit/Public/CIK_Object.h"
 #include "MainClasses/CIKAsyncFunction.h"
 #include "CIK_LoginWithEmail.generated.h"
@@ -13,18 +14,18 @@ struct FLoginWithEmailSuccessResponse
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString AccessToken;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString IdToken;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString RefreshToken;
 
 	//Time is in seconds
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int32 TokenExpiresIn;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	int32 TokenExpiresIn = 0;
 };
 
 USTRUCT(BlueprintType)
@@ -32,19 +33,19 @@ struct FLoginWithEmailFailureResponse
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString ErrorMessage;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	bool bCanUserRetry;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	bool bCanUserRetry = false;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString GetMessageA;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString GetMessageW;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString ExceptionName;
 };
 

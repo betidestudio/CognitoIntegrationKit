@@ -13,19 +13,19 @@ struct FAnalyticsConfiguration
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString ApplicationArn;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString ApplicationId;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString ExternalId;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString RoleArn;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     bool UserDataShared = false;
 };
 
@@ -34,13 +34,13 @@ struct FTokenValidityUnits
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString AccessToken;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString IdToken;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString RefreshToken;
 };
 
@@ -49,72 +49,72 @@ struct FUpdateUserPoolRequest
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FString ClientId;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    FString ClientId = "";
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    int32 AccessTokenValidity;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    int32 AccessTokenValidity = 0;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TArray<FString> AllowedOAuthFlows;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    TArray<FString> AllowedOAuthFlows = {};
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    bool AllowedOAuthFlowsUserPoolClient;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    bool AllowedOAuthFlowsUserPoolClient = false;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     TArray<FString> AllowedOAuthScopes;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FAnalyticsConfiguration AnalyticsConfiguration;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    FAnalyticsConfiguration AnalyticsConfiguration = {};
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    int32 AuthSessionValidity;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    int32 AuthSessionValidity = 0;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TArray<FString> CallbackURLs;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    TArray<FString> CallbackURLs = {};
 
     // Note: ClientId is already declared above
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FString ClientName;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    FString ClientName = "";
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FString DefaultRedirectURI;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    FString DefaultRedirectURI = "";
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    bool EnablePropagateAdditionalUserContextData;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    bool EnablePropagateAdditionalUserContextData = false;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    bool EnableTokenRevocation;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    bool EnableTokenRevocation = false;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TArray<FString> ExplicitAuthFlows;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    TArray<FString> ExplicitAuthFlows = {};
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    int32 IdTokenValidity;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    int32 IdTokenValidity = 0;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TArray<FString> LogoutURLs;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    TArray<FString> LogoutURLs = {};
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FString PreventUserExistenceErrors;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    FString PreventUserExistenceErrors = "";
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TArray<FString> ReadAttributes;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    TArray<FString> ReadAttributes = {};
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    int32 RefreshTokenValidity;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    int32 RefreshTokenValidity = 0;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TArray<FString> SupportedIdentityProviders;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    TArray<FString> SupportedIdentityProviders = {};
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FTokenValidityUnits TokenValidityUnits;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    FTokenValidityUnits TokenValidityUnits = {};
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    FString UserPoolId;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    FString UserPoolId = "";
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TArray<FString> WriteAttributes;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+    TArray<FString> WriteAttributes = {};
 };
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FUpdateUserPoolClientDelegate, FString, ClientSecret, FCognitoError, Error);

@@ -3,6 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Runtime/Core/Public/Misc/Paths.h"
+#include "Runtime/Core/Public/HAL/PlatformProcess.h"
+#include "Runtime/Core/Public/HAL/FileManager.h"
 #include "Modules/ModuleManager.h"
 
 class FCognitoIntegrationKitModule : public IModuleInterface

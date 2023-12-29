@@ -13,22 +13,22 @@ struct FResentConfirmationCodeRequest
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FAnalyticsMetadataType AnalyticsMetadata;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString ClientId;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	TMap<FString, FString> ClientMetaData;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString SecretHash;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FUserContextDataType UserContextData;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString Username;
 };
 

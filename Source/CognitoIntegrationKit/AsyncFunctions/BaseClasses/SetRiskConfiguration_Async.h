@@ -13,19 +13,19 @@ struct FSetRiskConfigurationRequest
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FAccountTakeoverRiskConfigurationType AccountTakeoverRiskConfiguration;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FCompromisedCredentialsRiskConfigurationType CompromisedCredentialsRiskConfiguration;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FRiskExceptionConfigurationType RiskExceptionConfiguration;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString ClientId;
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString UserPoolId;
 	
 };

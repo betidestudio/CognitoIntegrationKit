@@ -22,31 +22,31 @@ struct FAdminCreateUserReq
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	TMap<FString, FString> ClientMetaData;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	TArray<TEnumAsByte<EDeliveryMediumType>> DesiredDeliveryMediums;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	bool ForceAliasCreation;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	TEnumAsByte<MessageActionType> MessageAction;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString TemporaryPassword;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	TArray<FAttributeType> UserAttributes;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString Username;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	TArray<FAttributeType> ValidationData;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString UserPoolId;
 	
 };

@@ -15,13 +15,13 @@ struct FInviteMessageTemplate
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString EmailMessage;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString EmailSubject;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString SMSMessage;
 };
 
@@ -30,13 +30,13 @@ struct FAdminCreateUserConfig
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     bool AllowAdminCreateUserOnly;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FInviteMessageTemplate InviteMessageTemplate;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     int32 UnusedAccountValidityDays;
 
     
@@ -47,10 +47,10 @@ struct FDeviceConfiguration
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     bool ChallengeRequiredOnNewDevice;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     bool DeviceOnlyRememberedOnUserPrompt;
 };
 
@@ -59,19 +59,19 @@ struct FEmailConfiguration
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString ConfigurationSet;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString EmailSendingAccount;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString From;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString ReplyToEmailAddress;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString SourceArn;
 };
 
@@ -81,30 +81,30 @@ struct FUpdateUserPoolRequest1
 {
     GENERATED_BODY()
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FAccountRecoverySettingType AccountRecoverySetting;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FAdminCreateUserConfig AdminCreateUserConfig;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     TArray<FString> AutoVerifiedAttributes;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString DeletionProtection;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FDeviceConfiguration DeviceConfiguration;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FEmailConfiguration EmailConfiguration;
 
     // Add properties for all other nested structs defined
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     FString UserPoolId;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
     TMap<FString, FString> UserPoolTags;
 };
 

@@ -5,6 +5,7 @@
 
 #include "CoreMinimal.h"
 #include "CIK_Object.h"
+#include "Runtime/CoreUObject/Public/UObject/UObjectIterator.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
 #include "VerifyUserAttribute_Async.generated.h"
 

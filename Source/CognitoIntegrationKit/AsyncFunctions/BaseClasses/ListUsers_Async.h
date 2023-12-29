@@ -13,19 +13,20 @@ struct FListUsersRequest
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite)
-	FString UserPoolId;
-	UPROPERTY(BlueprintReadWrite)
-	FString Filter;
+	UPROPERTY(BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FString UserPoolId = "";
+	
+	UPROPERTY(BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FString Filter = "";
 
-	UPROPERTY(BlueprintReadWrite)
-	int32 Limit;
+	UPROPERTY(BlueprintReadWrite, Category = "Cognito Integration Kit")
+	int32 Limit = 0;
 
-	UPROPERTY(BlueprintReadWrite)
-	FString PaginationToken;
+	UPROPERTY(BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FString PaginationToken = "";
 
-	UPROPERTY(BlueprintReadWrite)
-	TArray<FString> AttributesToGet;
+	UPROPERTY(BlueprintReadWrite, Category = "Cognito Integration Kit")
+	TArray<FString> AttributesToGet = {};
 	
 };
 

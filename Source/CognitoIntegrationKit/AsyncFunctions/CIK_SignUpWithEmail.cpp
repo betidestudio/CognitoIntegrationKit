@@ -2,7 +2,7 @@
 
 
 #include "CIK_SignUpWithEmail.h"
-
+#include "Runtime/CoreUObject/Public/UObject/UObjectIterator.h"
 #include "CIK_Object.h"
 #include "aws/cognito-idp/model/SignUpRequest.h"
 

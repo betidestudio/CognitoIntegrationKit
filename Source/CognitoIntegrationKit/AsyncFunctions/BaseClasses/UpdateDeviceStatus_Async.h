@@ -14,14 +14,14 @@ struct FUpdateDeviceStatusReq
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString AccessToken;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString DeviceToken;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TEnumAsByte<EDeviceRememberedStatus> DeviceRememberedStatus;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	TEnumAsByte<EDeviceRememberedStatus> DeviceRememberedStatus = EDeviceRememberedStatus::NOT_SET29;
 	
 };
 

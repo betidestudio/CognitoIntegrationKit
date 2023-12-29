@@ -13,23 +13,23 @@ struct FInitiateAuthRequest
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite)
-	FAnalyticsMetadataType Metadata;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FAnalyticsMetadataType Metadata = {};
 	
-	UPROPERTY(BlueprintReadWrite)
-	FString AuthFlow;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FString AuthFlow = "";
 
-	UPROPERTY(BlueprintReadWrite)
-	TMap<FString, FString> AuthParameters;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	TMap<FString, FString> AuthParameters = {};
 
-	UPROPERTY(BlueprintReadWrite)
-	FString ClientId;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FString ClientId = "";
 
-	UPROPERTY(BlueprintReadWrite)
-	TMap<FString, FString> ClientMetadata;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	TMap<FString, FString> ClientMetadata = {};
 
-	UPROPERTY(BlueprintReadWrite)
-	FUserContextDataType UserContextData;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FUserContextDataType UserContextData = {};
 	
 };
 USTRUCT(BlueprintType)
@@ -37,17 +37,17 @@ struct FInitiateAuthResponse
 {
 	GENERATED_BODY()
 	
-	UPROPERTY(BlueprintReadWrite)
-	FAuthenticationResultType AuthenticationResult;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FAuthenticationResultType AuthenticationResult = {};
 
-	UPROPERTY(BlueprintReadWrite)
-	TEnumAsByte<EChallengeNameType> ChallengeName;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	TEnumAsByte<EChallengeNameType> ChallengeName = EChallengeNameType::NOT_SET26;
 
-	UPROPERTY(BlueprintReadWrite)
-	TMap<FString, FString> ChallengeParameters;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	TMap<FString, FString> ChallengeParameters = {};
 
-	UPROPERTY(BlueprintReadWrite)
-	FString Session;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
+	FString Session = {};
 };
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FInitiateAuthResult, FInitiateAuthResponse, InitiateAuthResponse, FCognitoError, Error);

@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "CIK_Object.h"
 #include "CognitoDataTypes.h"
+#include "Runtime/CoreUObject/Public/UObject/UObjectIterator.h"
+#include "Runtime/Core/Public/Async/Async.h"
 #include "Kismet/BlueprintAsyncActionBase.h"
 #include "CIKAsyncFunction.generated.h"
 /**

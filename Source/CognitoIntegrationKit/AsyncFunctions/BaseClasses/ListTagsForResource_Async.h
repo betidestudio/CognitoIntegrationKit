@@ -17,7 +17,7 @@ struct FListTagsForResourceResponse
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	TMap<FString, FString> Tags;
 };
 

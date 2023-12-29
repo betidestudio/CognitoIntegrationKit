@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "aws/cognito-idp/CognitoIdentityProviderClient.h"
 #include "UObject/NoExportTypes.h"
+#include "Runtime/Core/Public/Async/Async.h"
 #include "CIK_Object.generated.h"
 
 DECLARE_DYNAMIC_DELEGATE_TwoParams(FOnCognitoIdentityKitSetupComplete, bool, bWasSuccessful, UCIK_Object*, CognitoObject);
@@ -91,19 +92,19 @@ struct FCognitoError
 {
 	GENERATED_BODY()
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString ErrorMessage;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString GetMessageA;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString GetMessageW;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString ExceptionName;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	TEnumAsByte<ECognitoErrors> ErrorType = ECognitoErrors::UNKNOWN;
 };
 

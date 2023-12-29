@@ -16,7 +16,7 @@ struct FAdminListDevicesResult
 	UPROPERTY(BlueprintReadWrite, Category = "CognitoIntegrationKit")
 	TArray<FDeviceType> Devices;
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cognito Integration Kit")
 	FString PaginationToken;
 };
 

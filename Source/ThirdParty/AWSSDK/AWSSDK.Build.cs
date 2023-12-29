@@ -48,6 +48,13 @@ public class AWSSDK : ModuleRules
         {
             PublicDefinitions.Add("USE_WINDOWS_DLL_SEMANTICS");
         }
+        else if (Target.Platform == UnrealTargetPlatform.Android)
+        {
+            string LibraryPath = Path.Combine(ModuleDirectory, "Binaries", Target.Platform.ToString());
+            PublicAdditionalLibraries.Add(Path.Combine(LibraryPath, "libs2n.a"));
+            PublicIncludePathModuleNames.AddRange(new string[] { "Launch" });
+            //AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(ModuleDirectory, "AWSSDK_APL.xml"));
+        }
         foreach (string libName in LibraryNames)
         {
             string LibraryPath = Path.Combine(ModuleDirectory, "Binaries", Target.Platform.ToString());
@@ -71,6 +78,10 @@ public class AWSSDK : ModuleRules
             else if (Target.Platform == UnrealTargetPlatform.Linux)
             {
                 // add linux libraries
+            }
+            else if (Target.Platform == UnrealTargetPlatform.Android)
+            {
+                PublicAdditionalLibraries.Add(Path.Combine(LibraryPath, "lib" + libName + ".a"));
             }
         }
 
